@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "author": "Kauan Souza Teles",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-pi-pico-w", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 12,
+      "left": 145.8,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -3.6,
+      "left": -101.8,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 44.4,
+      "left": -101.8,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 92.4,
+      "left": -101.8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 176.75,
+      "left": -134.4,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GP21", "bz1:2", "green", [ "h0" ] ],
+    [ "pico:GND.6", "bz1:1", "black", [ "h99.86", "v-41.65" ] ],
+    [ "pico:GP11", "led1:A", "green", [ "h-63.65", "v-108.85" ] ],
+    [ "pico:GP12", "led2:A", "green", [ "h-73.25", "v-70.41" ] ],
+    [ "pico:GP13", "led3:A", "green", [ "h-82.85", "v-3.21" ] ],
+    [ "pico:GND.4", "r1:2", "black", [ "h0" ] ],
+    [ "r1:1", "led3:C", "black", [ "v0" ] ],
+    [ "led2:C", "r1:1", "black", [ "v0", "h-47.6" ] ],
+    [ "led1:C", "r1:1", "black", [ "v0", "h-47.6" ] ]
+  ],
+  "dependencies": {}
+}

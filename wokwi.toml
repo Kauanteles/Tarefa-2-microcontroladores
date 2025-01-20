@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/tarefa-2-microcontroladores.uf2'
+elf = 'build/tarefa-2-microcontroladores.elf'
