@@ -40,10 +40,15 @@ Para execução na placa de desenvolvimento ***BitDogLab***, siga os passos a se
 ## Comandos disponívels:
 
 'verde': Acende o LED verde.
+
 'azul': Acende o LED azul.
+
 'vermelho': Acende o LED vermelho.
+
 'ledsON': Acende todos os LEDs.
+
 'ledsOFF': Apaga todos os LEDs.
+
 'buzzer': Ativa o buzzer por 1 segundo.
 
 
