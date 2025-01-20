@@ -1,47 +1,52 @@
-Instruções de uso
-Para utilizar o software desenvolvido, siga os passos abaixo:
+# Instruções de uso
 
-1°: Clone o repositório para o seu computador.
+Para uso do software, siga os seguintes passos:
 
-Abra o projeto com o VSCode e, ao executar, os arquivos de compilação serão gerados automaticamente.
+- **1°:** clone o repositório para o seu computador.
 
-Caso os arquivos de compilação não sejam gerados, crie uma pasta chamada build e execute o seguinte comando dentro dela:
+    - Ao abrir o projeto com o **VSCode**, a extensão do **CMake** irá criar a pasta ``build`` para você com os arquivos de compilação.
 
-bash
-Copiar
-Editar
-cmake ..
-O comando acima irá gerar os arquivos de compilação necessários.
+    - Caso não seja gerada a pasta, crie uma pasta com nome `build` e execute o seguinte comando dentro da pasta criada:
+        
+        ``cmake ..``
 
-2°: Compile o código utilizando a extensão Raspberry Pi Pico no VSCode.
+        O comando acima irá criar os arquivos de compilação.
 
-A partir desse ponto, o firmware já estará compilado e pronto para uso.
+- **2°:** execute a compilação do firmware usando a extensão do ***Raspberry Pi Pico*** do ***VSCode***.
 
-Execução no ambiente de simulação Wokwi
-Para rodar o firmware no ambiente de simulação, você precisará da extensão Wokwi instalada no VSCode, além de ter configurado sua licença.
+A partir daqui, seu firmware já está compilado e pronto para uso, a depende de onde será usado.
 
-Com os requisitos acima atendidos, basta clicar no arquivo diagram.json, e a simulação abrirá automaticamente com o esquemático pronto.
+## Execução no ambiente de simulação Wokwi
 
-Clique no botão de play, no canto superior esquerdo, e simule!
+Para utilizar o ***firmware*** no ambiente de simulação, basta ter a extensão do **Wokwi** instalada no seu ***VSCode***, além de ter configurado a sua licença.
 
-Execução no Raspberry Pi Pico
-Para executar o firmware diretamente no Raspberry Pi Pico, siga os passos abaixo:
+Suprindo os requisitos citados acima, basta clicar no arquivo ``diagram.json``, e a simulação já abrirá com o esquemático pronto.
 
-Coloque o seu Raspberry Pi Pico em modo de bootsel:
+***Clique no botão de play, no canto superior esquerdo e simule!***
 
-Mantenha pressionado o botão BOOTSEL e conecte o dispositivo ao computador via USB. O Raspberry Pi aparecerá como um dispositivo de armazenamento.
-Copie o arquivo .uf2 gerado pela compilação para o Raspberry Pi Pico (ele aparecerá como um dispositivo USB externo com o nome de RPI-RP2).
+## Execução na *BitDogLab*
 
-O firmware começará a rodar automaticamente no Raspberry Pi Pico.
+Para execução na placa de desenvolvimento ***BitDogLab***, siga os passos a seguir:
 
-Comandos disponíveis
-Aqui estão os comandos que você pode usar no terminal para controlar os LEDs e o buzzer:
+- **1°:** coloque o seu ***Raspberry*** em modo de ***bootsel***, clicando no botão branco na placa e reiniciando a mesma.
 
-verde: Acende o LED verde.
-azul: Acende o LED azul.
-vermelho: Acende o LED vermelho.
-ledsON: Acende todos os LEDs.
-ledsOFF: Apaga todos os LEDs.
-buzzer: Ativa o buzzer por 1 segundo.
-Conclusão
-Com isso, você pode testar o funcionamento do sistema de LEDs e buzzer diretamente no seu Raspberry Pi Pico ou em ambiente de simulação no Wokwi.
+- **2°:** copie o arquivo `.uf2` que foi gerado na pasta `build` para o seu ***Raspberry*** (ele aparecerá como um armazenamento externo, um Pen-Drive com nome de RPI-RP2).
+
+    - Após isso, o seu código já vai está rodando na sua plaquinha ***BitDogLab***.
+
+- **3°:** Está pronto, dê os comandos para executar as funcionalidades digitando-os no terminal.
+
+
+## Comandos disponívels:
+
+  - `A`: liga LED vermelho por 1 segundo;
+  - `B`: liga o LED verde por 1 segundo;
+  - `D`: liga os três LEDs ao mesmo tempo por 1 segundo (cor branca);
+  - `*`: ativa o buzzer, que toca as notas *dó, ré, mi, fá, sol, lá, si, DÓ*, alternando os LEDs junto com as notas;
+  - `0`: toca o buzzer por 2 segundos;
+  - `#`: acende os três LEDs alternadamente, um de cada vez.
+
+
+## Vídeo Ensaio
+
+Clique em ***[link do video](https://youtu.be/equ_KvMuMq8)*** para visualizar o vídeo ensaio do projeto.
