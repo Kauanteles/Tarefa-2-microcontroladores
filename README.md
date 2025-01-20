@@ -39,12 +39,12 @@ Para execução na placa de desenvolvimento ***BitDogLab***, siga os passos a se
 
 ## Comandos disponívels:
 
-  - `A`: liga LED vermelho por 1 segundo;
-  - `B`: liga o LED verde por 1 segundo;
-  - `D`: liga os três LEDs ao mesmo tempo por 1 segundo (cor branca);
-  - `*`: ativa o buzzer, que toca as notas *dó, ré, mi, fá, sol, lá, si, DÓ*, alternando os LEDs junto com as notas;
-  - `0`: toca o buzzer por 2 segundos;
-  - `#`: acende os três LEDs alternadamente, um de cada vez.
+'verde': Acende o LED verde.
+'azul': Acende o LED azul.
+'vermelho': Acende o LED vermelho.
+'ledsON': Acende todos os LEDs.
+'ledsOFF': Apaga todos os LEDs.
+'buzzer': Ativa o buzzer por 1 segundo.
 
 
 ## Vídeo Ensaio
